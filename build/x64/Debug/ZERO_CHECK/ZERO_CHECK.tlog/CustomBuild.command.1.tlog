@@ -1,0 +1,10 @@
+^D:\Z12OB\RAYTRACING\BUILD\CMAKEFILES\6B98B17D8C822ABC38FFF64706F860E4\GENERATE.STAMP.RULE
+setlocal
+D:\mingw64\bin\cmake.exe -SD:/z12ob/RayTracing -BD:/z12ob/RayTracing/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/z12ob/RayTracing/build/RayTracingInOneWeekend.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,10 @@
+^D:\Z12OB\RAYTRACING\CMAKELISTS.TXT
+setlocal
+D:\mingw64\bin\cmake.exe -SD:/z12ob/RayTracing -BD:/z12ob/RayTracing/build --check-stamp-file D:/z12ob/RayTracing/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
